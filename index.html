@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Lawyer Assistant - Get free legal information and guidance 24/7">
-    <meta name="keywords" content="legal advice, lawyer chatbot, legal help, AI assistant">
+    <meta name="description" content="AI Lawyer Assistant - Get free legal information powered by AI">
     <title>AI Lawyer Assistant - Free Legal Guidance 24/7</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,28 +33,9 @@
             align-items: center;
         }
 
-        nav .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
-        }
-
+        nav .logo { color: white; font-size: 24px; font-weight: bold; }
+        nav ul { list-style: none; display: flex; gap: 30px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
         nav ul li a:hover { opacity: 0.8; }
 
         .hero {
@@ -66,19 +46,8 @@
             margin-top: 60px;
         }
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.2s backwards;
-        }
-
+        .hero h1 { font-size: 48px; margin-bottom: 20px; animation: fadeInUp 1s ease; }
+        .hero p { font-size: 20px; margin-bottom: 30px; opacity: 0.9; }
         .hero .cta-button {
             background: white;
             color: #667eea;
@@ -89,9 +58,7 @@
             font-size: 18px;
             display: inline-block;
             transition: transform 0.3s;
-            animation: fadeInUp 1s ease 0.4s backwards;
         }
-
         .hero .cta-button:hover { transform: scale(1.05); }
 
         @keyframes fadeInUp {
@@ -99,18 +66,8 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section h2 {
-            font-size: 36px;
-            text-align: center;
-            margin-bottom: 50px;
-            color: #333;
-        }
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 36px; text-align: center; margin-bottom: 50px; }
 
         .features-grid {
             display: grid;
@@ -126,29 +83,9 @@
             text-align: center;
             transition: transform 0.3s;
         }
-
         .feature-card:hover { transform: translateY(-10px); }
         .feature-card .icon { font-size: 50px; margin-bottom: 20px; }
         .feature-card h3 { font-size: 22px; margin-bottom: 15px; color: #667eea; }
-        .feature-card p { color: #666; line-height: 1.8; }
-
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-        }
-
-        .topic-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .topic-card:hover { transform: scale(1.05); }
-        .topic-card h3 { font-size: 20px; margin-bottom: 10px; }
 
         .chat-container-wrapper {
             max-width: 900px;
@@ -187,7 +124,6 @@
             align-items: flex-start;
             animation: slideIn 0.3s ease;
         }
-
         .message.user { flex-direction: row-reverse; }
 
         .message-avatar {
@@ -205,22 +141,15 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
         }
-
         .message.user .message-avatar { background: #28a745; color: white; }
 
         .message-content { max-width: 70%; margin: 0 15px; }
-
-        .message-bubble {
-            padding: 12px 18px;
-            border-radius: 18px;
-            line-height: 1.6;
-        }
+        .message-bubble { padding: 12px 18px; border-radius: 18px; line-height: 1.6; }
 
         .message.bot .message-bubble {
             background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-
         .message.user .message-bubble {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -239,7 +168,6 @@
             background: #667eea;
             animation: bounce 1.4s infinite;
         }
-
         .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
         .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
 
@@ -247,7 +175,6 @@
             0%, 60%, 100% { transform: translateY(0); }
             30% { transform: translateY(-10px); }
         }
-
         @keyframes slideIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
@@ -272,12 +199,7 @@
             font-size: 13px;
             transition: all 0.3s;
         }
-
-        .quick-btn:hover {
-            background: #667eea;
-            color: white;
-            border-color: #667eea;
-        }
+        .quick-btn:hover { background: #667eea; color: white; border-color: #667eea; }
 
         .chat-input-container {
             padding: 20px;
@@ -295,7 +217,6 @@
             outline: none;
             transition: border 0.3s;
         }
-
         #chatInput:focus { border-color: #667eea; }
 
         #sendBtn {
@@ -308,22 +229,13 @@
             font-weight: 600;
             transition: transform 0.2s;
         }
-
         #sendBtn:hover { transform: scale(1.05); }
 
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 20px 20px;
-            text-align: center;
-        }
-
-        footer p { margin-bottom: 10px; }
+        footer { background: #2c3e50; color: white; padding: 40px 20px; text-align: center; }
 
         @media (max-width: 768px) {
             nav ul { display: none; }
             .hero h1 { font-size: 32px; }
-            .section h2 { font-size: 28px; }
         }
 
         ::-webkit-scrollbar { width: 8px; }
@@ -338,7 +250,6 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#topics">Topics</a></li>
                 <li><a href="#chat">Chat Now</a></li>
             </ul>
         </div>
@@ -346,71 +257,41 @@
 
     <section id="home" class="hero">
         <h1>⚖️ AI Lawyer Assistant</h1>
-        <p>Get instant legal guidance and information 24/7</p>
+        <p>Get instant legal guidance powered by AI - 24/7</p>
         <a href="#chat" class="cta-button">Start Chat Now</a>
     </section>
 
     <section id="features" class="section">
-        <h2>Why Choose Our AI Legal Assistant?</h2>
+        <h2>Powered by Google Gemini AI</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="icon">⚡</div>
-                <h3>Instant Responses</h3>
-                <p>Get immediate answers to your legal questions 24/7 without waiting for appointments.</p>
+                <div class="icon">🤖</div>
+                <h3>AI-Powered</h3>
+                <p>Real AI understanding powered by Google Gemini for intelligent legal guidance.</p>
             </div>
             <div class="feature-card">
-                <div class="icon">🔒</div>
-                <h3>Confidential & Safe</h3>
-                <p>Your conversations are private and secure. We prioritize your privacy.</p>
+                <div class="icon">⚡</div>
+                <h3>Instant Answers</h3>
+                <p>Get detailed responses with actual laws, sections, and step-by-step advice.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">💰</div>
-                <h3>Free Information</h3>
-                <p>Access general legal information at no cost. Know your rights.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="topics" class="section" style="background: #f8f9fa;">
-        <h2>Legal Topics We Cover</h2>
-        <div class="topics-grid">
-            <div class="topic-card">
-                <h3>📄 Contract Law</h3>
-                <p>Agreements, breaches, terms, and conditions</p>
-            </div>
-            <div class="topic-card">
-                <h3>💼 Employment Law</h3>
-                <p>Workplace rights, wrongful termination, wages</p>
-            </div>
-            <div class="topic-card">
-                <h3>🏠 Property Law</h3>
-                <p>Real estate, landlord-tenant, leases</p>
-            </div>
-            <div class="topic-card">
-                <h3>👨‍👩‍👧 Family Law</h3>
-                <p>Divorce, custody, child support, alimony</p>
-            </div>
-            <div class="topic-card">
-                <h3>🚨 Criminal Law</h3>
-                <p>Arrests, charges, rights, defense</p>
-            </div>
-            <div class="topic-card">
-                <h3>💡 Intellectual Property</h3>
-                <p>Patents, trademarks, copyrights</p>
+                <h3>100% Free</h3>
+                <p>Access professional-quality legal information at no cost.</p>
             </div>
         </div>
     </section>
 
     <section id="chat" class="section" style="background: #f8f9fa;">
-        <h2>Chat with AI Lawyer Assistant</h2>
+        <h2>Chat with AI Legal Assistant</h2>
         <div class="chat-container-wrapper">
             <div class="chat-header">
-                <h3>⚖️ Start Your Consultation</h3>
-                <p>Ask any legal question and get instant guidance</p>
+                <h3>⚖️ AI-Powered Legal Consultation</h3>
+                <p>Ask any legal question - Get intelligent answers</p>
             </div>
             
             <div class="chat-disclaimer">
-                ⚠️ <strong>Important:</strong> This chatbot provides general legal information only and is not a substitute for professional legal advice.
+                ⚠️ <strong>Powered by Google Gemini AI.</strong> This provides general legal information only, not professional legal advice.
             </div>
 
             <div class="chat-messages" id="chatMessages">
@@ -418,7 +299,7 @@
                     <div class="message-avatar">⚖️</div>
                     <div class="message-content">
                         <div class="message-bubble">
-                            Hello! I'm your AI Legal Assistant. I can provide general information about contracts, employment, property, family law, criminal law, and more. What would you like to know?
+                            Hello! I'm your AI Legal Assistant powered by Google Gemini. I can help with detailed legal information, cite relevant laws and sections, and provide step-by-step guidance. What legal question can I help you with today?
                         </div>
                         <div class="message-time" id="initialTime"></div>
                     </div>
@@ -435,56 +316,61 @@
             </div>
 
             <div class="quick-actions">
-                <button class="quick-btn" onclick="sendQuickMessage('Contract Law')">📄 Contract</button>
-                <button class="quick-btn" onclick="sendQuickMessage('Employment Rights')">💼 Employment</button>
-                <button class="quick-btn" onclick="sendQuickMessage('Property Law')">🏠 Property</button>
-                <button class="quick-btn" onclick="sendQuickMessage('Family Law')">👨‍👩‍👧 Family</button>
-                <button class="quick-btn" onclick="sendQuickMessage('Criminal Law')">🚨 Criminal</button>
+                <button class="quick-btn" onclick="sendQuickMessage('What is Section 420 IPC?')">🚨 Section 420 IPC</button>
+                <button class="quick-btn" onclick="sendQuickMessage('My employer fired me unfairly')">💼 Wrongful Termination</button>
+                <button class="quick-btn" onclick="sendQuickMessage('Landlord not returning deposit')">🏠 Security Deposit</button>
+                <button class="quick-btn" onclick="sendQuickMessage('Consumer rights in India')">🛒 Consumer Rights</button>
             </div>
 
             <div class="chat-input-container">
-                <input type="text" id="chatInput" placeholder="Type your legal question here..." onkeypress="handleKeyPress(event)">
+                <input type="text" id="chatInput" placeholder="Ask any legal question..." onkeypress="handleKeyPress(event)">
                 <button id="sendBtn" onclick="sendMessage()">Send</button>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 AI Lawyer Assistant. All rights reserved.</p>
+        <p>&copy; 2024 AI Lawyer Assistant - Powered by Google Gemini AI</p>
         <p style="margin-top: 10px; font-size: 12px; opacity: 0.7;">
-            This is an AI-powered educational tool and does not replace professional legal counsel.
+            Educational tool - Not a replacement for professional legal counsel
         </p>
     </footer>
 
     <script>
+        // ========== GOOGLE GEMINI AI CONFIGURATION ==========
+        const GEMINI_API_KEY = "AIzaSyDTZBKQp61FU1K4dn8j_v9L_8l4t42gvLY"; // 👈 PASTE YOUR GEMINI API KEY HERE!
+        const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
+        
+        const SYSTEM_PROMPT = `You are an expert AI Legal Assistant specializing in Indian law. 
+
+Your responsibilities:
+- Provide accurate, detailed legal information
+- Cite relevant sections, articles, and legal acts
+- Give practical step-by-step action plans
+- Include time limits and deadlines where applicable
+- List required documents
+- Always include a disclaimer that this is general information, not legal advice
+- Be empathetic, professional, and helpful
+
+Format your responses clearly with:
+📋 Applicable Laws (with section numbers)
+⚖️ User's Legal Rights
+💼 Step-by-Step Action Plan
+📄 Documents Needed
+⏰ Important Deadlines
+💰 Possible Compensation (if applicable)
+
+Always end with: "⚠️ DISCLAIMER: This is general legal information. Please consult a licensed attorney for advice specific to your situation."`;
+
+        // Fallback knowledge for when API fails
         const legalKnowledge = {
             'contract': {
-                keywords: ['contract', 'agreement', 'breach', 'terms', 'sign'],
-                response: "📄 <strong>Contract Law Information:</strong><br><br>A contract is a legally binding agreement. Key elements include:<br>• Offer and Acceptance<br>• Consideration (value exchanged)<br>• Mutual Intent<br>• Legal capacity<br><br>If you believe a contract has been breached, document everything and consider consulting an attorney."
+                keywords: ['contract', 'agreement', 'breach', 'terms'],
+                response: "📄 <strong>Contract Law:</strong><br><br>Key elements include Offer, Acceptance, Consideration, and Mutual Intent. Document everything if breach occurs."
             },
             'employment': {
-                keywords: ['employment', 'job', 'fired', 'workplace', 'salary', 'wages', 'boss', 'work'],
-                response: "💼 <strong>Employment Law Guidance:</strong><br><br>Employment law protects workers' rights:<br>• Fair wages and overtime pay<br>• Protection from discrimination<br>• Safe working conditions<br>• Wrongful termination protection<br><br>Document all workplace incidents."
-            },
-            'property': {
-                keywords: ['property', 'real estate', 'landlord', 'tenant', 'lease', 'rent', 'eviction'],
-                response: "🏠 <strong>Property Law Information:</strong><br><br>Property law covers real estate and landlord-tenant issues:<br>• Lease agreements should be in writing<br>• Landlords must maintain habitable conditions<br>• Tenants have rights against unfair eviction<br>• Security deposits have specific regulations"
-            },
-            'family': {
-                keywords: ['divorce', 'custody', 'marriage', 'child support', 'alimony', 'family'],
-                response: "👨‍👩‍👧 <strong>Family Law Matters:</strong><br><br>Family law covers domestic relationships:<br>• Divorce and legal separation<br>• Child custody and visitation<br>• Child support and alimony<br>• Adoption and guardianship<br><br>The best interests of children are paramount."
-            },
-            'criminal': {
-                keywords: ['arrest', 'criminal', 'charge', 'police', 'crime', 'jail', 'prison'],
-                response: "🚨 <strong>Criminal Law - Important Rights:</strong><br><br>If arrested or charged:<br>• You have the right to remain silent - USE IT<br>• Request an attorney immediately<br>• Do not speak to police without legal counsel<br>• Do not consent to searches without a warrant"
-            },
-            'intellectual': {
-                keywords: ['patent', 'trademark', 'copyright', 'ip', 'intellectual property', 'brand'],
-                response: "💡 <strong>Intellectual Property Protection:</strong><br><br>IP law protects creations:<br>• Patents protect inventions and processes<br>• Trademarks protect brands and logos<br>• Copyrights protect creative works<br>• Trade secrets protect confidential info"
-            },
-            'injury': {
-                keywords: ['injury', 'accident', 'negligence', 'compensation', 'damages', 'hurt', 'injured'],
-                response: "🏥 <strong>Personal Injury Claims:</strong><br><br>If injured due to negligence:<br>• Seek immediate medical attention<br>• Document everything (photos, witnesses)<br>• Keep all medical records and bills<br>• Be aware of statutes of limitations"
+                keywords: ['employment', 'job', 'fired', 'workplace', 'salary'],
+                response: "💼 <strong>Employment Law:</strong><br><br>Workers have rights to fair wages, no discrimination, safe workplace, and wrongful termination protection."
             }
         };
 
@@ -511,6 +397,49 @@
             container.scrollTop = container.scrollHeight;
         }
 
+        // NEW: Google Gemini AI Integration
+        async function getGeminiResponse(userMessage) {
+            try {
+                const response = await fetch(`${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{
+                                text: `${SYSTEM_PROMPT}
+
+User Question: ${userMessage}
+
+Provide a comprehensive, well-formatted legal response.`
+                            }]
+                        }],
+                        generationConfig: {
+                            temperature: 0.7,
+                            maxOutputTokens: 1000,
+                        }
+                    })
+                });
+
+                const data = await response.json();
+                
+                if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+                    let responseText = data.candidates[0].content.parts[0].text;
+                    // Convert markdown-style formatting to HTML
+                    responseText = responseText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    responseText = responseText.replace(/\n/g, '<br>');
+                    return responseText;
+                } else {
+                    console.error('Unexpected API response:', data);
+                    return getFallbackResponse(userMessage);
+                }
+            } catch (error) {
+                console.error('Gemini API Error:', error);
+                return getFallbackResponse(userMessage);
+            }
+        }
+
         function findLegalTopic(message) {
             const lower = message.toLowerCase();
             for (const [topic, data] of Object.entries(legalKnowledge)) {
@@ -519,27 +448,23 @@
             return null;
         }
 
-        function getBotResponse(msg) {
+        function getFallbackResponse(msg) {
             const lower = msg.toLowerCase();
             
             if (['hello', 'hi', 'hey', 'greetings'].some(w => lower.includes(w))) {
-                return "Hello! 👋 I'm your AI Legal Assistant. What would you like to know about?";
+                return "Hello! 👋 I'm your AI Legal Assistant. I'm currently having trouble connecting to my AI service, but I can still help with basic legal information. What would you like to know?";
             }
             
             if (lower.includes('help')) {
-                return "I can provide information on:<br><br>📄 Contract Law<br>💼 Employment Law<br>🏠 Property Law<br>👨‍👩‍👧 Family Law<br>🚨 Criminal Law<br>💡 Intellectual Property<br>🏥 Personal Injury";
-            }
-            
-            if (lower.includes('thank')) {
-                return "You're welcome! Remember to consult a licensed attorney for specific advice.";
+                return "I can provide basic information on:<br><br>📄 Contract Law<br>💼 Employment Law<br>🏠 Property Law<br>👨‍👩‍👧 Family Law<br>🚨 Criminal Law<br><br>(Note: I'm currently in fallback mode. Some features may be limited.)";
             }
             
             const topic = findLegalTopic(msg);
             if (topic) {
-                return legalKnowledge[topic].response + "<br><br>⚖️ <em>This is general information, not legal advice. Consult a licensed attorney for your specific situation.</em>";
+                return legalKnowledge[topic].response + "<br><br>⚠️ <em>Note: I'm currently in limited mode. For detailed AI-powered responses, please try again in a moment.</em>";
             }
             
-            return "Please be more specific about your legal concern. You can ask about contracts, employment, property, family law, criminal law, IP, or personal injury. Or type 'help' for all topics.";
+            return "I'm having trouble connecting to my AI service right now. Please check that the API key is configured correctly, or try asking a simpler question. Type 'help' to see topics I can discuss in limited mode.";
         }
 
         function showTypingIndicator() {
@@ -551,35 +476,54 @@
             document.getElementById('typingIndicator').classList.remove('active');
         }
 
-        function sendMessage() {
+        async function sendMessage() {
             const input = document.getElementById('chatInput');
             const msg = input.value.trim();
             if (!msg) return;
+            
+            // Disable input while processing
+            input.disabled = true;
             
             addMessage(msg, true);
             input.value = '';
             showTypingIndicator();
             
-            setTimeout(() => {
-                hideTypingIndicator();
-                addMessage(getBotResponse(msg), false);
-            }, 1000 + Math.random() * 1000);
+            // Get AI response
+            const response = await getGeminiResponse(msg);
+            
+            hideTypingIndicator();
+            addMessage(response, false);
+            
+            // Re-enable input
+            input.disabled = false;
+            input.focus();
         }
 
-        function sendQuickMessage(topic) {
-            document.getElementById('chatInput').value = `Tell me about ${topic}`;
+        function sendQuickMessage(message) {
+            document.getElementById('chatInput').value = message;
             sendMessage();
         }
 
         function handleKeyPress(e) {
-            if (e.key === 'Enter') sendMessage();
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
         }
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
+        });
+
+        // Focus input on load
+        window.addEventListener('load', () => {
+            document.getElementById('chatInput').focus();
         });
     </script>
 </body>
